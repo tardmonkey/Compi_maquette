@@ -53,7 +53,6 @@ main {
   background-size: cover;
   background-repeat: none;
   background-position: center;
-  background-size: auto;
   -o-object-fit: fill;
      object-fit: fill;
 }
@@ -63,7 +62,6 @@ main h1 {
   font-size: 1rem;
 }
 main #img--container {
-  margin-top: 3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
