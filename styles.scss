@@ -12,6 +12,7 @@ html{
 }
 
 body{
+
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -57,18 +58,21 @@ header{
 main{
     height: 100%;
     background-image: url("./src/img/dan-meyers-IQVFVH0ajag-unsplash.jpg");
+    background-size: cover;
+    background-repeat: none;
+    background-position: center;
+    background-size: ;
+    object-fit: fill;
     h1{
         color:$txtImgColor;
-        transform: translate3d(0rem,-6.7rem,0rem);
-        font-size: 1.2rem;
+        transform: translate3d(0rem,-5.5rem,0rem);
+        font-size: 1rem;
     }
     
     
    
     #img--container{
-        margin-top: 3rem;
         display: flex;
-        gap:1rem;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -97,8 +101,8 @@ main{
     //METTRE UNE DIV ET ZOMMER QUE LES IMAGES ??
     //METTRE UNE DIV ET ZOMMER QUE LES IMAGES ??
     .img--round{
-        height: 10rem;
-        width: 10rem;
+        height: 8rem;
+        width: 8rem;
         border-radius: 50%;
         object-fit: cover;
         border: white solid 0.3rem;

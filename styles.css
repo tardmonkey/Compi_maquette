@@ -50,16 +50,21 @@ header ul li {
 main {
   height: 100%;
   background-image: url("./src/img/dan-meyers-IQVFVH0ajag-unsplash.jpg");
+  background-size: cover;
+  background-repeat: none;
+  background-position: center;
+  background-size: auto;
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 main h1 {
   color: white;
-  transform: translate3d(0rem, -6.7rem, 0rem);
-  font-size: 1.2rem;
+  transform: translate3d(0rem, -5.5rem, 0rem);
+  font-size: 1rem;
 }
 main #img--container {
   margin-top: 3rem;
   display: flex;
-  gap: 1rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -89,8 +94,8 @@ main #img--container div:nth-child(3n) {
           animation-delay: 900ms;
 }
 main .img--round {
-  height: 10rem;
-  width: 10rem;
+  height: 8rem;
+  width: 8rem;
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
