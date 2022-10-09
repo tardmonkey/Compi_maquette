@@ -1,0 +1,147 @@
+//COLORS VAR
+//COLORS VAR
+// $primay-color:
+$secondary-color:#f5bf56;
+$text-color: #0000;
+$txtImgColor: white;
+
+html{
+    height:100%;
+    animation-duration: 1500ms;
+    animation-name: fadein;
+}
+
+body{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    height:100%;
+}
+
+header{
+    padding:5px;
+    background-color: black;
+    opacity:0.8;
+        ul{
+            list-style-type: none;
+            display: flex;
+           justify-content: center;
+           margin:0;
+            gap:2rem;
+            li{
+                color: $text-color;
+            }
+        }
+        
+        
+        
+}
+#logo{
+    max-width: 5rem;
+    max-height: 5rem;
+    margin-top: 1rem;
+    margin-left:1rem;
+     img{
+         height: 100%;
+         width: 100%;
+         object-fit: cover;
+     }
+ 
+     &:hover{
+         transform: rotate(30deg);
+         transition: 0.2s;
+ 
+     }
+ }
+main{
+    height: 100%;
+    background-image: url("/src/img/dan-meyers-IQVFVH0ajag-unsplash.jpg");
+    h1{
+        color:$txtImgColor;
+        transform: translate3d(0rem,-6.7rem,0rem);
+        font-size: 1.2rem;
+    }
+    
+    
+   
+    #img--container{
+        margin-top: 3rem;
+        display: flex;
+        gap:1rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        object-fit: fill;
+        
+        div{
+            
+            animation-duration: 2000ms;
+            animation-name: appear;
+            animation-fill-mode: both;
+        
+
+            @for $i from 1 through 3 {
+                &:nth-child(#{$i}n) {
+                    animation-delay: #{$i * 300}ms;
+                }
+        }
+        
+            
+        }
+        
+    }
+    //METTRE UNE DIV ET ZOMMER QUE LES IMAGES ??
+    //METTRE UNE DIV ET ZOMMER QUE LES IMAGES ??
+    //METTRE UNE DIV ET ZOMMER QUE LES IMAGES ??
+    .img--round{
+        height: 10rem;
+        width: 10rem;
+        border-radius: 50%;
+        object-fit: cover;
+        border: white solid 0.3rem;
+        
+
+       &:hover{
+            transform: scale(1.1);
+            transition: 0.2s;
+           
+        }
+    }
+}
+
+
+
+article{
+    border: green solid 2px;
+    h2{
+        color:$secondary-color;
+    }
+}
+
+
+//ANIMATIONS
+//ANIMATIONS
+//ANIMATIONS
+
+@keyframes fadein {
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+@keyframes appear {
+    0%{
+      opacity: 0%;
+
+    }
+    100%{
+      opacity: 100%;
+
+    }
+}

@@ -1,0 +1,143 @@
+html {
+  height: 100%;
+  -webkit-animation-duration: 1500ms;
+          animation-duration: 1500ms;
+  -webkit-animation-name: fadein;
+          animation-name: fadein;
+}
+
+body {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+  height: 100%;
+}
+
+header {
+  padding: 5px;
+  background-color: black;
+  opacity: 0.8;
+}
+header ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  gap: 2rem;
+}
+header ul li {
+  color: rgba(0, 0, 0, 0);
+}
+
+#logo {
+  max-width: 5rem;
+  max-height: 5rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+#logo img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#logo:hover {
+  transform: rotate(30deg);
+  transition: 0.2s;
+}
+
+main {
+  height: 100%;
+  background-image: url("/src/img/dan-meyers-IQVFVH0ajag-unsplash.jpg");
+}
+main h1 {
+  color: white;
+  transform: translate3d(0rem, -6.7rem, 0rem);
+  font-size: 1.2rem;
+}
+main #img--container {
+  margin-top: 3rem;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+main #img--container div {
+  -webkit-animation-duration: 2000ms;
+          animation-duration: 2000ms;
+  -webkit-animation-name: appear;
+          animation-name: appear;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+main #img--container div:nth-child(1n) {
+  -webkit-animation-delay: 300ms;
+          animation-delay: 300ms;
+}
+main #img--container div:nth-child(2n) {
+  -webkit-animation-delay: 600ms;
+          animation-delay: 600ms;
+}
+main #img--container div:nth-child(3n) {
+  -webkit-animation-delay: 900ms;
+          animation-delay: 900ms;
+}
+main .img--round {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: white solid 0.3rem;
+}
+main .img--round:hover {
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+
+article {
+  border: green solid 2px;
+}
+article h2 {
+  color: #f5bf56;
+}
+
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes appear {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+@keyframes appear {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}/*# sourceMappingURL=styles.css.map */
