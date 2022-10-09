@@ -49,7 +49,7 @@ header ul li {
 
 main {
   height: 100%;
-  background-image: url("/src/img/dan-meyers-IQVFVH0ajag-unsplash.jpg");
+  background-image: url("./src/img/dan-meyers-IQVFVH0ajag-unsplash.jpg");
 }
 main h1 {
   color: white;
