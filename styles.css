@@ -95,6 +95,7 @@ main .img--round {
   -o-object-fit: cover;
      object-fit: cover;
   border: white solid 0.3rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 main .img--round:hover {
   transform: scale(1.1);
@@ -128,16 +129,32 @@ article h2 {
 @-webkit-keyframes appear {
   0% {
     opacity: 0%;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(1.2);
   }
   100% {
-    opacity: 100%;
+    transform: scale(1);
   }
 }
 @keyframes appear {
   0% {
     opacity: 0%;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(1.2);
   }
   100% {
-    opacity: 100%;
+    transform: scale(1);
   }
 }/*# sourceMappingURL=styles.css.map */
