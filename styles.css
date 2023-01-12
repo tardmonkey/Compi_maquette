@@ -160,4 +160,9 @@ article h2 {
   100% {
     transform: scale(1);
   }
+}
+#loader {
+  height: 100%;
+  width: 100%;
+  background-color: red;
 }/*# sourceMappingURL=styles.css.map */
