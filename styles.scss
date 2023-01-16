@@ -170,7 +170,7 @@ article{
     width:100vw;
     height:50vh;
     z-index:1;
-    background-color:red;
+    background-color:whitesmoke;
     animation:loader--top 500ms ease;animation-delay:1800ms;animation-fill-mode: forwards;
 }
 #loader--bottom{
@@ -179,8 +179,26 @@ article{
     width:100vw;
     height:50vh;
     z-index:1;
-    background-color:blue;
+    background-color:whitesmoke;
     animation:loader--bottom 500ms ease;animation-delay:1800ms;animation-fill-mode: forwards;
+}
+
+#loader__logo{
+    animation: loader__logo 300ms ease;animation-delay:1500ms;animation-fill-mode: forwards;
+    position: absolute;
+    top:25%;
+    left:25%;
+    opacity:1;
+    display:block;
+    height: 50vh;
+    width: 50vw;
+    z-index: 2;
+    img{
+        
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+    }
 }
 
 @keyframes loader--item {
@@ -194,8 +212,17 @@ article{
 }
 
 @keyframes loader--top {
-    100%{ transform: translate3d(0, -100%,0);display:none;}
+    100%{ height: 0rem;}
 }
 @keyframes loader--bottom {
-    100%{ transform: translate3d(0, 100%,0);display:none;}
+    100%{ height: 0rem;}
+}
+
+@keyframes loader__logo {
+    100%{
+        opacity:0;
+        display:none;
+        height: 0;
+        width: 0;
+    }
 }

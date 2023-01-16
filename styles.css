@@ -167,7 +167,7 @@ article h2 {
   width: 100vw;
   height: 50vh;
   z-index: 1;
-  background-color: red;
+  background-color: whitesmoke;
   -webkit-animation: loader--top 500ms ease;
           animation: loader--top 500ms ease;
   -webkit-animation-delay: 1800ms;
@@ -182,13 +182,36 @@ article h2 {
   width: 100vw;
   height: 50vh;
   z-index: 1;
-  background-color: blue;
+  background-color: whitesmoke;
   -webkit-animation: loader--bottom 500ms ease;
           animation: loader--bottom 500ms ease;
   -webkit-animation-delay: 1800ms;
           animation-delay: 1800ms;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+}
+
+#loader__logo {
+  -webkit-animation: loader__logo 300ms ease;
+          animation: loader__logo 300ms ease;
+  -webkit-animation-delay: 1500ms;
+          animation-delay: 1500ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  opacity: 1;
+  display: block;
+  height: 50vh;
+  width: 50vw;
+  z-index: 2;
+}
+#loader__logo img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 @-webkit-keyframes loader--item {
@@ -248,25 +271,37 @@ article h2 {
 }
 @-webkit-keyframes loader--top {
   100% {
-    transform: translate3d(0, -100%, 0);
-    display: none;
+    height: 0rem;
   }
 }
 @keyframes loader--top {
   100% {
-    transform: translate3d(0, -100%, 0);
-    display: none;
+    height: 0rem;
   }
 }
 @-webkit-keyframes loader--bottom {
   100% {
-    transform: translate3d(0, 100%, 0);
-    display: none;
+    height: 0rem;
   }
 }
 @keyframes loader--bottom {
   100% {
-    transform: translate3d(0, 100%, 0);
+    height: 0rem;
+  }
+}
+@-webkit-keyframes loader__logo {
+  100% {
+    opacity: 0;
     display: none;
+    height: 0;
+    width: 0;
+  }
+}
+@keyframes loader__logo {
+  100% {
+    opacity: 0;
+    display: none;
+    height: 0;
+    width: 0;
   }
 }/*# sourceMappingURL=styles.css.map */
