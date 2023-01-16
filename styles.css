@@ -68,8 +68,8 @@ main #img--container {
      object-fit: fill;
 }
 main #img--container div {
-  -webkit-animation-duration: 2000ms;
-          animation-duration: 2000ms;
+  -webkit-animation-duration: 3500ms;
+          animation-duration: 3500ms;
   -webkit-animation-name: appear;
           animation-name: appear;
   -webkit-animation-fill-mode: both;
@@ -202,78 +202,40 @@ article h2 {
   top: 25%;
   left: 25%;
   opacity: 1;
-  display: block;
+  display: flex;
+  flex-direction: column;
   height: 50vh;
   width: 50vw;
   z-index: 2;
 }
 #loader__logo img {
-  height: 100%;
-  width: 100%;
+  width: auto;
   -o-object-fit: contain;
      object-fit: contain;
 }
-
-@-webkit-keyframes loader--item {
-  0% {
-    transform: scale(0.5);
-    opacity: 30%;
-  }
-  20% {
-    transform: scale(0.7);
-    opacity: 60%;
-  }
-  40% {
-    transform: scale(0.5);
-    opacity: 70%;
-  }
-  60% {
-    transform: scale(0.7);
-    opacity: 80%;
-  }
-  80% {
-    transform: scale(0.5);
-    opacity: 90%;
-  }
-  100% {
-    transform: scale(0.7);
-    opacity: 0;
-    display: none;
-  }
+#loader__logo img:nth-child(1) {
+  -webkit-animation: logo--twist 800ms ease;
+          animation: logo--twist 800ms ease;
+  -webkit-animation-delay: 500ms;
+          animation-delay: 500ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+#loader__logo img:nth-child(2) {
+  -webkit-animation: logo--pulse 500ms ease;
+          animation: logo--pulse 500ms ease;
+  -webkit-animation-delay: 50ms;
+          animation-delay: 50ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
-@keyframes loader--item {
-  0% {
-    transform: scale(0.5);
-    opacity: 30%;
-  }
-  20% {
-    transform: scale(0.7);
-    opacity: 60%;
-  }
-  40% {
-    transform: scale(0.5);
-    opacity: 70%;
-  }
-  60% {
-    transform: scale(0.7);
-    opacity: 80%;
-  }
-  80% {
-    transform: scale(0.5);
-    opacity: 90%;
-  }
-  100% {
-    transform: scale(0.7);
-    opacity: 0;
-    display: none;
-  }
-}
 @-webkit-keyframes loader--top {
   100% {
     height: 0rem;
   }
 }
+
 @keyframes loader--top {
   100% {
     height: 0rem;
@@ -292,16 +254,38 @@ article h2 {
 @-webkit-keyframes loader__logo {
   100% {
     opacity: 0;
-    display: none;
-    height: 0;
-    width: 0;
+    visibility: hidden;
   }
 }
 @keyframes loader__logo {
   100% {
     opacity: 0;
-    display: none;
-    height: 0;
-    width: 0;
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes logo--twist {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes logo--twist {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes logo--pulse {
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes logo--pulse {
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
   }
 }/*# sourceMappingURL=styles.css.map */

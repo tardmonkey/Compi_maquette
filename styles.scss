@@ -81,7 +81,7 @@ main{
         
         div{
             
-            animation-duration: 2000ms;
+            animation-duration: 3500ms;
             animation-name: appear;
             animation-fill-mode: both;
             
@@ -189,27 +189,28 @@ article{
     top:25%;
     left:25%;
     opacity:1;
-    display:block;
+    display:flex;
+    flex-direction: column;
     height: 50vh;
     width: 50vw;
     z-index: 2;
     img{
         
-        height: 100%;
-        width: 100%;
+        width: auto;
         object-fit: contain;
+        
+        &:nth-child(1){
+            animation: logo--twist 800ms ease;animation-delay:500ms;animation-fill-mode: forwards;
+            
+        }
+        &:nth-child(2){
+
+            
+            animation: logo--pulse 500ms ease; animation-delay:50ms; animation-fill-mode: forwards;
+        }
     }
 }
 
-@keyframes loader--item {
-    0%{transform:scale(0.5);opacity:30%;}
-    20%{transform:scale(0.7);opacity:60%;}
-    40%{transform:scale(0.5);opacity:70%;}
-    60%{transform:scale(0.7);opacity:80%;}
-    80%{transform:scale(0.5);opacity:90%;}
-    100%{transform:scale(0.7);opacity:0;display:none;}
-    
-}
 
 @keyframes loader--top {
     100%{ height: 0rem;}
@@ -221,8 +222,22 @@ article{
 @keyframes loader__logo {
     100%{
         opacity:0;
-        display:none;
-        height: 0;
-        width: 0;
+        visibility:hidden;
     }
+}
+
+@keyframes logo--twist {
+    0%{
+        
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes logo--pulse {
+    0%{}
+    50%{transform: scale(1.1);}
+    100%{transform: scale(1);}
+    
 }
