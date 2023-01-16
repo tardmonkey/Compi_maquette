@@ -1,9 +1,5 @@
 html {
   height: 100%;
-  -webkit-animation-duration: 1500ms;
-          animation-duration: 1500ms;
-  -webkit-animation-name: fadein;
-          animation-name: fadein;
 }
 
 body {
@@ -162,7 +158,115 @@ article h2 {
   }
 }
 #loader {
-  height: 100%;
-  width: 100%;
+  overflow: hidden;
+}
+
+#loader--top {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 50vh;
+  z-index: 1;
   background-color: red;
+  -webkit-animation: loader--top 500ms ease;
+          animation: loader--top 500ms ease;
+  -webkit-animation-delay: 1800ms;
+          animation-delay: 1800ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+#loader--bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  height: 50vh;
+  z-index: 1;
+  background-color: blue;
+  -webkit-animation: loader--bottom 500ms ease;
+          animation: loader--bottom 500ms ease;
+  -webkit-animation-delay: 1800ms;
+          animation-delay: 1800ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes loader--item {
+  0% {
+    transform: scale(0.5);
+    opacity: 30%;
+  }
+  20% {
+    transform: scale(0.7);
+    opacity: 60%;
+  }
+  40% {
+    transform: scale(0.5);
+    opacity: 70%;
+  }
+  60% {
+    transform: scale(0.7);
+    opacity: 80%;
+  }
+  80% {
+    transform: scale(0.5);
+    opacity: 90%;
+  }
+  100% {
+    transform: scale(0.7);
+    opacity: 0;
+    display: none;
+  }
+}
+
+@keyframes loader--item {
+  0% {
+    transform: scale(0.5);
+    opacity: 30%;
+  }
+  20% {
+    transform: scale(0.7);
+    opacity: 60%;
+  }
+  40% {
+    transform: scale(0.5);
+    opacity: 70%;
+  }
+  60% {
+    transform: scale(0.7);
+    opacity: 80%;
+  }
+  80% {
+    transform: scale(0.5);
+    opacity: 90%;
+  }
+  100% {
+    transform: scale(0.7);
+    opacity: 0;
+    display: none;
+  }
+}
+@-webkit-keyframes loader--top {
+  100% {
+    transform: translate3d(0, -100%, 0);
+    display: none;
+  }
+}
+@keyframes loader--top {
+  100% {
+    transform: translate3d(0, -100%, 0);
+    display: none;
+  }
+}
+@-webkit-keyframes loader--bottom {
+  100% {
+    transform: translate3d(0, 100%, 0);
+    display: none;
+  }
+}
+@keyframes loader--bottom {
+  100% {
+    transform: translate3d(0, 100%, 0);
+    display: none;
+  }
 }/*# sourceMappingURL=styles.css.map */

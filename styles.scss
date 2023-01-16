@@ -7,8 +7,7 @@ $txtImgColor: white;
 
 html{
     height:100%;
-    animation-duration: 1500ms;
-    animation-name: fadein;
+  
 }
 
 body{
@@ -85,7 +84,7 @@ main{
             animation-duration: 2000ms;
             animation-name: appear;
             animation-fill-mode: both;
-        
+            
 
             @for $i from 1 through 3 {
                 &:nth-child(#{$i}n) {
@@ -162,9 +161,41 @@ article{
 
 //LOADER
 //LOADER
-
 #loader{
-    height: 100%;
-    width: 100%;
+    overflow: hidden;
+}
+#loader--top{
+    position:absolute;
+    top:0;
+    width:100vw;
+    height:50vh;
+    z-index:1;
     background-color:red;
+    animation:loader--top 500ms ease;animation-delay:1800ms;animation-fill-mode: forwards;
+}
+#loader--bottom{
+    position:absolute;
+    bottom:0;
+    width:100vw;
+    height:50vh;
+    z-index:1;
+    background-color:blue;
+    animation:loader--bottom 500ms ease;animation-delay:1800ms;animation-fill-mode: forwards;
+}
+
+@keyframes loader--item {
+    0%{transform:scale(0.5);opacity:30%;}
+    20%{transform:scale(0.7);opacity:60%;}
+    40%{transform:scale(0.5);opacity:70%;}
+    60%{transform:scale(0.7);opacity:80%;}
+    80%{transform:scale(0.5);opacity:90%;}
+    100%{transform:scale(0.7);opacity:0;display:none;}
+    
+}
+
+@keyframes loader--top {
+    100%{ transform: translate3d(0, -100%,0);display:none;}
+}
+@keyframes loader--bottom {
+    100%{ transform: translate3d(0, 100%,0);display:none;}
 }
