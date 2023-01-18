@@ -141,7 +141,7 @@ main{
     background-position: center;
     
     div{
-        margin:1rem;
+       padding:1rem;
     }
 }
 
@@ -155,6 +155,11 @@ main{
     animation:pageChange--click 5000ms ease;animation-fill-mode: forwards;
     width: 0vw;
     overflow: hidden;
+}
+
+#contact{
+    display: none;
+    
 }
 
 //ANIMATIONS
