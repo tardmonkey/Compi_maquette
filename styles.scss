@@ -46,9 +46,10 @@ header{
 
 #logo{
     max-width: 5rem;
-    max-height: 5rem;
     margin-top: 1rem;
     margin-left:1rem;
+    display: flex;
+    
      img{
         
          width: 100%;
@@ -59,6 +60,14 @@ header{
          transform: rotate(30deg);
          transition: 0.2s;
  
+     }
+
+     
+ }
+
+ #arrow-left{
+    i{
+        font-size: 2rem;
      }
  }
 main{
@@ -125,17 +134,27 @@ main{
 
 #about{
     display: none;
-    height: 0vh;
+    height: 100vh;
     background-image: url("./src/img/dan-meyers-IQVFVH0ajag-unsplash.jpg");
-
+    background-size: cover;
+    background-repeat: none;
+    background-position: center;
+    
     div{
         margin:1rem;
     }
 }
 
 .about--clicked{
-    animation:pageChange--click 500ms ease;animation-delay:100ms;animation-fill-mode: forwards;
+    
     flex-direction: column;
+}
+
+#about__text{
+    font-size: large;
+    animation:pageChange--click 5000ms ease;animation-fill-mode: forwards;
+    width: 0vw;
+    overflow: hidden;
 }
 
 //ANIMATIONS
@@ -174,7 +193,7 @@ main{
 
 @keyframes pageChange--click {
     0%{}
-    100%{height: 100vh;}
+    100%{width: 100vw;}
 }
 
 //LOADER
