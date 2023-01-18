@@ -37,13 +37,20 @@ header{
         
         
 }
+
+.hide{
+    opacity:0;
+    display:none;
+    visibility: none;
+}
+
 #logo{
     max-width: 5rem;
     max-height: 5rem;
     margin-top: 1rem;
     margin-left:1rem;
      img{
-         height: 100%;
+        
          width: 100%;
          object-fit: cover;
      }
@@ -116,14 +123,20 @@ main{
 }
 
 
+#about{
+    display: none;
+    height: 0vh;
+    background-image: url("./src/img/dan-meyers-IQVFVH0ajag-unsplash.jpg");
 
-article{
-    border: green solid 2px;
-    h2{
-        color:$secondary-color;
+    div{
+        margin:1rem;
     }
 }
 
+.about--clicked{
+    animation:pageChange--click 500ms ease;animation-delay:100ms;animation-fill-mode: forwards;
+    flex-direction: column;
+}
 
 //ANIMATIONS
 //ANIMATIONS
@@ -157,6 +170,11 @@ article{
         transform: scale(1);
 
     }
+}
+
+@keyframes pageChange--click {
+    0%{}
+    100%{height: 100vh;}
 }
 
 //LOADER
