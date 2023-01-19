@@ -48,7 +48,7 @@ header ul li {
   transition: 0.2s;
 }
 
-#arrow-left i {
+.arrow-left i {
   font-size: 2rem;
 }
 
@@ -138,6 +138,15 @@ main .img--round:hover {
 
 #contact {
   display: none;
+  height: 100vh;
+  background-image: url("./src/img/dan-meyers-IQVFVH0ajag-unsplash.jpg");
+  background-size: cover;
+  background-repeat: none;
+  background-position: center;
+}
+#contact div {
+  background-color: antiquewhite;
+  border: red solid 2px;
 }
 
 @-webkit-keyframes fadein {
@@ -329,5 +338,13 @@ main .img--round:hover {
   }
   100% {
     transform: scale(1);
+  }
+}
+@media (min-width: 850px) {
+  #loader__logo {
+    top: 20%;
+    left: 40%;
+    height: 25vh;
+    width: 25vw;
   }
 }/*# sourceMappingURL=styles.css.map */

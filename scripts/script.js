@@ -1,11 +1,12 @@
-window.addEventListener('load', function (){
+document.addEventListener('DOMContentLoaded', function () {
 
     //boutons 
 
     document.getElementById("bouton__qui").addEventListener("click", pageQui)
     document.getElementById("bouton__contact").addEventListener("click", pageContact)
-    document.getElementById("arrow-left").addEventListener("click", pageAccueil)
-
+    let arrowLeft = document.querySelector("arrow-left")
+    
+    console.log(arrowLeft)
 
     function pageQui() {
         document.querySelector("main").setAttribute("class", "hide")

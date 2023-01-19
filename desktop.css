@@ -1,0 +1,8 @@
+@media (min-width: 850px) {
+  #loader__logo {
+    top: 20%;
+    left: 40%;
+    height: 25vh;
+    width: 25vw;
+  }
+}/*# sourceMappingURL=desktop.css.map */
