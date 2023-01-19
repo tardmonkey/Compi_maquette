@@ -4,10 +4,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     document.getElementById("bouton__qui").addEventListener("click", pageQui)
     document.getElementById("bouton__contact").addEventListener("click", pageContact)
-    let arrowLeft = document.querySelector("arrow-left")
-    
-    console.log(arrowLeft)
 
+    //Transforme le tableau d'element HTML des classes en array, puis ajoute l'event sur chacun d'eux
+    let arrowLeft = document.getElementsByClassName("arrow-left")
+    arrowLeft = Array.from(arrowLeft)
+    arrowLeft.forEach(element => {
+        element.addEventListener("click", pageAccueil)
+    });
+   
     function pageQui() {
         document.querySelector("main").setAttribute("class", "hide")
         document.getElementById("about").style.display = "flex"
