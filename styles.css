@@ -48,8 +48,13 @@ header ul li {
   transition: 0.2s;
 }
 
-.arrow-left i {
+.arrow-left {
+  width: 10vw;
   font-size: 2rem;
+  background-color: rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 5%;
+  left: 5%;
 }
 
 main {
@@ -139,30 +144,49 @@ main .img--round:hover {
 #contact {
   display: none;
   height: 100vh;
-  background-image: url("./src/img/dan-meyers-IQVFVH0ajag-unsplash.jpg");
-  background-size: cover;
-  background-repeat: none;
-  background-position: center;
+  -webkit-animation: fadein 1300ms ease;
+          animation: fadein 1300ms ease;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
-#contact div {
-  border: red solid 2px;
+
+#contact--wrapper {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: rgba(206, 221, 238, 0.452);
+}
+#contact--wrapper #contact--wrapper__contact {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(241, 240, 229, 0.527);
 }
 
 @-webkit-keyframes fadein {
   0% {
     opacity: 0;
+    background-color: rgb(151, 139, 139);
   }
   100% {
     opacity: 1;
+    background-color: white;
   }
 }
 
 @keyframes fadein {
   0% {
     opacity: 0;
+    background-color: rgb(151, 139, 139);
   }
   100% {
     opacity: 1;
+    background-color: white;
   }
 }
 @-webkit-keyframes appear {

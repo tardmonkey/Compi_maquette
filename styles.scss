@@ -6,6 +6,8 @@ $secondary-color:#f5bf56;
 $text-color: #0000;
 $txtImgColor: white;
 
+
+
 html{
     height:100%;
 }
@@ -66,10 +68,13 @@ header{
  }
 
  .arrow-left{
-
-    i{
-        font-size: 2rem;
-     }
+    width: 10vw;
+    font-size: 2rem;
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    top:5%;
+    left:5%;
+   
  }
 main{
     height: 100%;
@@ -161,13 +166,29 @@ main{
 #contact{
     display: none;
     height: 100vh;
-    background-image: url("./src/img/dan-meyers-IQVFVH0ajag-unsplash.jpg");
-    background-size: cover;
-    background-repeat: none;
-    background-position: center;
-    div{
-        border: red solid 2px;
+    animation: fadein 1300ms ease; animation-fill-mode: both;
+    
+}
+
+#contact--wrapper{
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    gap:1rem;
+    background-color: rgba(206, 221, 238, 0.452);
+    #contact--wrapper__contact{
+        
+        width: 100vw;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(241, 240, 229, 0.527);
     }
+    
+
 }
 
 //ANIMATIONS
@@ -177,9 +198,11 @@ main{
 @keyframes fadein {
     0%{
         opacity:0;
+        background-color:rgb(151, 139, 139);
     }
     100%{
         opacity:1;
+        background-color:white;
     }
 }
 
