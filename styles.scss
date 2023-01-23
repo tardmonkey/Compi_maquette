@@ -10,6 +10,7 @@ $txtImgColor: white;
 
 html{
     height:100%;
+    font-family: 'Roboto', sans-serif;
 }
 
 body{
@@ -72,8 +73,8 @@ header{
     font-size: 2rem;
     background-color: rgba(0, 0, 0, 0);
     position: absolute;
-    top:5%;
-    left:5%;
+    top:1%;
+    left:1%;
    
  }
 main{
@@ -174,10 +175,14 @@ main{
     display: flex;
     height: 100vh;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items:center;
     gap:1rem;
-    background-color: rgba(206, 221, 238, 0.452);
+
+    h2{
+        margin-left: 2rem;
+    }
+
     #contact--wrapper__contact{
         
         width: 100vw;
@@ -186,8 +191,32 @@ main{
         justify-content: center;
         align-items: center;
         background-color: rgba(241, 240, 229, 0.527);
+        padding:1rem;
+    
+        i{
+            margin:.4rem;
+            color:rgb(88, 88, 88);
+        }
+        p{
+            margin:0.2rem;
+            
+        }
     }
     
+    iframe{
+        width: 100vw;
+    }
+
+    #socialmedia--wrapper{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+       
+        i{
+            font-size: 2rem;
+            color:rgb(88, 88, 88);
+        }
+    }
 
 }
 
