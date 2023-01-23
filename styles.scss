@@ -349,6 +349,23 @@ main{
 //DESKTOP 
 @media (min-width: 850px) {
     
+    main  {
+
+        #img--container{
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            height: 50vh;
+            gap: 7rem;
+        }
+
+        .img--round{
+            height: 15rem;
+            width: 15rem;
+        }
+        
+    }
+
     #loader__logo{
         top:20%;
         left:40%;
@@ -356,4 +373,6 @@ main{
         width: 25vw;
                 
     }
+
+    
 }

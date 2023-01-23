@@ -387,6 +387,17 @@ main .img--round:hover {
   }
 }
 @media (min-width: 850px) {
+  main #img--container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    height: 50vh;
+    gap: 7rem;
+  }
+  main .img--round {
+    height: 15rem;
+    width: 15rem;
+  }
   #loader__logo {
     top: 20%;
     left: 40%;
