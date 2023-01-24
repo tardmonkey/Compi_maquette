@@ -55,7 +55,7 @@ body{
  }
 
  .arrow-left{
-    width: 10vw;
+    padding-right: 5vw;
     font-size: 2rem;
   
    
@@ -150,30 +150,51 @@ main{
 #contact{
     display: none;
     height: 100vh;
+    width: 100vw;
     animation: fadein 1300ms ease; animation-fill-mode: both;
     color:$first-color;
     menu{
+        width: 100vw;
         display: flex;
         align-items: center;
         flex-wrap: nowrap;
-        position: absolute;
         padding: 1rem;
         margin:0;
-        width: 100vw;
         background-color: $fourth-color;
         gap: 2rem;
         color:$first-color;
         
         img{
-            height: 10vh;
+            height: 9vh;
         }
+
+        li{
+
+            &:nth-child(3){
+                padding-top:1rem;
+            border-top: solid #ffffff00 2px;
+            }
+            &:nth-child(4){
+                padding-top:1rem;
+                border-top: solid #ffffff00 2px;
+            }
+            &:nth-child(3):hover{
+                border-top: solid $first-color 2px;
+            }
+            &:nth-child(4):hover{
+                border-top: solid $first-color 2px;
+            }
+        }
+        
+       
     } 
 }
 
 #contact--wrapper{
-
+    
     display: flex;
     height: 100vh;
+    width: 100vw;
     flex-direction: column;
     justify-content: space-evenly;
     align-items:center;
@@ -184,8 +205,8 @@ main{
     }
 
     #contact--wrapper__contact{
-        text-align: center;
         width: 100vw;
+        text-align: center;
         display:flex;
         flex-direction: column;
         justify-content: center;
@@ -202,9 +223,19 @@ main{
             
         }
     }
-    
-    iframe{
+    #map--wrapper{
         width: 100vw;
+        height: 50vh;
+    }
+    iframe{
+        width: 100%;
+        height: 100%;
+        //normalize iframe 
+         border-width: 0px;
+        border-style: none;
+        border-color: none;
+        border-image: none;
+        overflow: clip !important;
     }
 
     #socialmedia--wrapper{

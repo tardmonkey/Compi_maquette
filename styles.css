@@ -38,7 +38,7 @@ body {
 }
 
 .arrow-left {
-  width: 10vw;
+  padding-right: 5vw;
   font-size: 2rem;
 }
 
@@ -129,6 +129,7 @@ main .img--round:hover {
 #contact {
   display: none;
   height: 100vh;
+  width: 100vw;
   -webkit-animation: fadein 1300ms ease;
           animation: fadein 1300ms ease;
   -webkit-animation-fill-mode: both;
@@ -136,24 +137,38 @@ main .img--round:hover {
   color: #eeeeee;
 }
 #contact menu {
+  width: 100vw;
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
-  position: absolute;
   padding: 1rem;
   margin: 0;
-  width: 100vw;
   background-color: #77628c;
   gap: 2rem;
   color: #eeeeee;
 }
 #contact menu img {
-  height: 10vh;
+  height: 9vh;
+}
+#contact menu li:nth-child(3) {
+  padding-top: 1rem;
+  border-top: solid rgba(255, 255, 255, 0) 2px;
+}
+#contact menu li:nth-child(4) {
+  padding-top: 1rem;
+  border-top: solid rgba(255, 255, 255, 0) 2px;
+}
+#contact menu li:nth-child(3):hover {
+  border-top: solid #eeeeee 2px;
+}
+#contact menu li:nth-child(4):hover {
+  border-top: solid #eeeeee 2px;
 }
 
 #contact--wrapper {
   display: flex;
   height: 100vh;
+  width: 100vw;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
@@ -164,8 +179,8 @@ main .img--round:hover {
   margin-left: 2rem;
 }
 #contact--wrapper #contact--wrapper__contact {
-  text-align: center;
   width: 100vw;
+  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -180,8 +195,19 @@ main .img--round:hover {
 #contact--wrapper #contact--wrapper__contact p {
   margin: 0.2rem;
 }
-#contact--wrapper iframe {
+#contact--wrapper #map--wrapper {
   width: 100vw;
+  height: 50vh;
+}
+#contact--wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border-width: 0px;
+  border-style: none;
+  border-color: none;
+  -o-border-image: none;
+     border-image: none;
+  overflow: clip !important;
 }
 #contact--wrapper #socialmedia--wrapper {
   display: flex;
