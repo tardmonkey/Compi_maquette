@@ -1,11 +1,14 @@
 
 //COLORS VAR
 //COLORS VAR
-// $primay-color:
-$secondary-color:#f5bf56;
-$text-color: #0000;
-$txtImgColor: white;
+$first-color:#eeeeee;
+$secondary-color:#acc6aa;
+$third-color:#71a0a5;
+$fourth-color:#77628c;
 
+
+//Normalize
+li{list-style: none;}
 
 
 html{
@@ -22,24 +25,7 @@ body{
     height:100%;
 }
 
-header{
-    padding:5px;
-    background-color: black;
-    opacity:0.8;
-        ul{
-            list-style-type: none;
-            display: flex;
-           justify-content: center;
-           margin:0;
-            gap:2rem;
-            li{
-                color: $text-color;
-            }
-        }
-        
-        
-        
-}
+
 
 .hide{
     opacity:0;
@@ -71,10 +57,7 @@ header{
  .arrow-left{
     width: 10vw;
     font-size: 2rem;
-    background-color: rgba(0, 0, 0, 0);
-    position: absolute;
-    top:1%;
-    left:1%;
+  
    
  }
 main{
@@ -86,7 +69,7 @@ main{
    
     object-fit: fill;
     h1{
-        color:$txtImgColor;
+        color:$first-color;
         transform: translate3d(0rem,-5.5rem,0rem);
         font-size: 1rem;
     }
@@ -168,34 +151,51 @@ main{
     display: none;
     height: 100vh;
     animation: fadein 1300ms ease; animation-fill-mode: both;
-    
+    color:$first-color;
+    menu{
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        position: absolute;
+        padding: 1rem;
+        margin:0;
+        width: 100vw;
+        background-color: $fourth-color;
+        gap: 2rem;
+        color:$first-color;
+        
+        img{
+            height: 10vh;
+        }
+    } 
 }
 
 #contact--wrapper{
+
     display: flex;
     height: 100vh;
     flex-direction: column;
     justify-content: space-evenly;
     align-items:center;
-    gap:1rem;
-
+    background-color: $first-color;
+    gap:1.5rem;
     h2{
         margin-left: 2rem;
     }
 
     #contact--wrapper__contact{
-        
+        text-align: center;
         width: 100vw;
         display:flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-color: rgba(241, 240, 229, 0.527);
+        background-color: $secondary-color;
         padding:1rem;
     
         i{
             margin:.4rem;
-            color:rgb(88, 88, 88);
+            color:$fourth-color;
         }
         p{
             margin:0.2rem;
@@ -214,7 +214,7 @@ main{
        
         i{
             font-size: 2rem;
-            color:rgb(88, 88, 88);
+            color:$fourth-color;
         }
     }
 
@@ -360,8 +360,8 @@ main{
         }
 
         .img--round{
-            height: 15rem;
-            width: 15rem;
+            height: 13rem;
+            width: 13rem;
         }
         
     }
