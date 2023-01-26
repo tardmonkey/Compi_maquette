@@ -55,7 +55,6 @@ body{
  }
 
  .arrow-left{
-    padding-right: 5vw;
     font-size: 2rem;
   
    
@@ -149,22 +148,20 @@ main{
 
 #contact{
     display: none;
-    height: 100vh;
-    width: 100vw;
     animation: fadein 1300ms ease; animation-fill-mode: both;
     color:$first-color;
     menu{
-        width: 100vw;
         display: flex;
         align-items: center;
         flex-wrap: nowrap;
-        padding: 1rem;
         margin:0;
         background-color: $fourth-color;
         gap: 2rem;
         color:$first-color;
+        
         img{
             height: 9vh;
+            
         }
 
         li{
@@ -172,6 +169,7 @@ main{
             &:nth-child(3){
                 padding-top:1rem;
             border-top: solid #ffffff00 2px;
+            
             }
             &:nth-child(4){
                 padding-top:1rem;
@@ -192,13 +190,10 @@ main{
 #contact--wrapper{
     
     display: flex;
-    height: 100vh;
-    width: 100vw;
     flex-direction: column;
     justify-content: space-evenly;
     align-items:center;
     background-color: $first-color;
-    gap:1.5rem;
     h2{
         margin-left: 2rem;
     }
@@ -211,7 +206,6 @@ main{
         justify-content: center;
         align-items: center;
         background-color: $secondary-color;
-        padding:1rem;
     
         i{
             margin:.4rem;
@@ -234,7 +228,6 @@ main{
         border-style: none;
         border-color: none;
         border-image: none;
-        overflow: clip !important;
     }
 
     #socialmedia--wrapper{
@@ -248,6 +241,63 @@ main{
         }
     }
 
+}
+
+//CONTACT FORM
+//CONTACT FORM
+//CONTACT FORM
+
+.form_wrapper {
+    #contact--form {
+        padding:2rem;
+
+        h3 {
+            color: $fourth-color;
+        }
+
+        textarea{
+            height: 10vh;
+        }
+    }
+
+        
+    fieldset {
+        display:flex;
+        margin-bottom:2rem;
+        border:  none;
+        padding: 0;
+    }
+}
+
+
+#contact--form input, textarea {
+	width:100%;
+	border:1px solid $third-color;
+	background:$first-color;
+    padding:0.5rem;
+}
+
+
+
+#contact--form button[type="submit"] {
+	cursor:pointer;
+	width:100%;
+	border:none;
+	background:$fourth-color;
+	color:$first-color;
+    padding:0.6rem;
+
+}
+
+#contact--form button[type="submit"]:hover {
+	background:$third-color;
+	transition:background-color 0.3s ease-in-out;
+}
+
+
+#contact--form input:focus, #contact--form textarea:focus {
+	outline:0;
+	border:2px solid $fourth-color;
 }
 
 //ANIMATIONS
