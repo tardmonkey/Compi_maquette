@@ -168,10 +168,16 @@ main .img--round:hover {
   background-color: #eeeeee;
 }
 #contact--wrapper h2 {
-  margin-left: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 0rem;
+  font-size: xx-large;
+  font-weight: 1000;
+}
+#contact--wrapper p:nth-child(3) {
+  font-style: italic;
 }
 #contact--wrapper #contact--wrapper__contact {
-  width: 100vw;
+  width: 99vw;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -187,12 +193,12 @@ main .img--round:hover {
   margin: 0.2rem;
 }
 #contact--wrapper #map--wrapper {
-  width: 100vw;
+  width: 99vw;
   height: 50vh;
 }
 #contact--wrapper iframe {
-  width: 100%;
   height: 100%;
+  width: 100%;
   border-width: 0px;
   border-style: none;
   border-color: none;
