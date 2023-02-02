@@ -1,3 +1,9 @@
+#formio {
+  border: red solid 2px;
+  height: 100vh;
+  width: 100vw;
+}
+
 li {
   list-style: none;
 }
