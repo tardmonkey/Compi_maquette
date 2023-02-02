@@ -1,3 +1,1 @@
-faire formulaire + mailing liste avec sendgrid, formio etc...
-
-https://docs.sendgrid.com/for-developers/sending-email/formio
+Captcha + mail de confirmation ?
