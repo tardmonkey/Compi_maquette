@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
 
     
+    
 
     //boutons 
 
@@ -32,10 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
             buggyid.src = buggyid.src;
         }, 500);       
         
-        //FORM.IO LOAD
-        window.onload = function() {
-             Formio.createForm(document.getElementById('formio'), 'https://ryllkgmvxqvfpnm.form.io/demande');
-        };
+        Formio.createForm(document.getElementById('formio'),"https://ryllkgmvxqvfpnm.form.io/demande" );
     }
 
     function pageAccueil(){

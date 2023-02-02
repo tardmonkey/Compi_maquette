@@ -6,11 +6,7 @@ $secondary-color:#acc6aa;
 $third-color:#71a0a5;
 $fourth-color:#77628c;
 
-#formio{
-    border:red solid 2px;
-    height: 100vh;
-    width: 100vw;
-}
+
 
 //Normalize
 li{list-style: none;}
@@ -260,30 +256,27 @@ main{
 //CONTACT FORM
 
 .form_wrapper {
-    #contact--form {
+    
         padding:2rem;
 
         h3 {
             color: $fourth-color;
         }
-
-        textarea{
-            height: 10vh;
+        h4{
+            color: $fourth-color;
+            opacity: 0.7;
         }
-    }
 
-        
-    fieldset {
-        display:flex;
-        margin-bottom:2rem;
-        border:  none;
-        padding: 0;
-    }
 }
 
 
-#contact--form input, textarea {
-	width:100%;
+#formio{
+    display:flex;
+    justify-content: center;
+    
+
+} input, textarea {
+    width:50vw;
 	border:1px solid $third-color;
 	background:$first-color;
     padding:0.5rem;
@@ -291,7 +284,7 @@ main{
 
 
 
-#contact--form button[type="submit"] {
+#formio button[type="submit"] {
 	cursor:pointer;
 	width:100%;
 	border:none;
@@ -301,13 +294,13 @@ main{
 
 }
 
-#contact--form button[type="submit"]:hover {
+#formio button[type="submit"]:hover {
 	background:$third-color;
 	transition:background-color 0.3s ease-in-out;
 }
 
 
-#contact--form input:focus, #contact--form textarea:focus {
+#formio input:focus, #formio textarea:focus {
 	outline:0;
 	border:2px solid $fourth-color;
 }

@@ -7,15 +7,16 @@
     <title>Compi - C'est notre projet</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/d01f6e12fe.js" crossorigin="anonymous"></script>
-    <script src="./scripts/script.js"></script>
+    <script src="./scripts/script.mjs" type="module"></script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <!-- OBFUSCATED CODE POUR API RECAPTCHA -->
     <script>
         function _0x4a94(_0x2a43ea,_0x2dc08a){var _0x49c3ae=_0x49c3();return _0x4a94=function(_0x4a94f3,_0x3c9afb){_0x4a94f3=_0x4a94f3-0x1ce;var _0x5308e8=_0x49c3ae[_0x4a94f3];return _0x5308e8;},_0x4a94(_0x2a43ea,_0x2dc08a);}(function(_0x1d2142,_0x416575){var _0x408f2e=_0x4a94,_0xf4c4f3=_0x1d2142();while(!![]){try{var _0x1cded8=-parseInt(_0x408f2e(0x1d8))/0x1*(parseInt(_0x408f2e(0x1d9))/0x2)+parseInt(_0x408f2e(0x1d4))/0x3+-parseInt(_0x408f2e(0x1d1))/0x4*(parseInt(_0x408f2e(0x1cf))/0x5)+parseInt(_0x408f2e(0x1ce))/0x6+parseInt(_0x408f2e(0x1d0))/0x7+-parseInt(_0x408f2e(0x1d6))/0x8*(-parseInt(_0x408f2e(0x1d7))/0x9)+parseInt(_0x408f2e(0x1d5))/0xa*(parseInt(_0x408f2e(0x1d3))/0xb);if(_0x1cded8===_0x416575)break;else _0xf4c4f3['push'](_0xf4c4f3['shift']());}catch(_0x371391){_0xf4c4f3['push'](_0xf4c4f3['shift']());}}}(_0x49c3,0xcbf6c));function onSubmit(_0x115c45){var _0x28bc70=_0x4a94;document['getElementById'](_0x28bc70(0x1d2))[_0x28bc70(0x1da)]();}function _0x49c3(){var _0x4e8e43=['3541905fQibRY','3Ydqznw','529410jcQQxW','submit','1771932sfEpYj','1585wtqBNP','7746417xSQmNr','19288aEdHzC','contact--form','24387HTmziO','2072628pdyAfl','3030ZTuDjw','8fgRraB'];_0x49c3=function(){return _0x4e8e43;};return _0x49c3();}
       </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+      <script src='https://cdn.form.io/formiojs/formio.full.min.js'></script>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
    
@@ -121,28 +122,12 @@
                 </div>
             </div>
             <div class="form_wrapper">  
-                <form id="contact--form" action="./back/app.js" method="POST">
-                  <h3>Contactez-nous</h3>
-                  <h4>Envoyez nous votre demande et elle sera probablement traité dans les moins de deux ans.</h4>
-                  <fieldset>
-                    <input placeholder="Nom" type="text" tabindex="1" required autofocus>
-                  </fieldset>
-                  <fieldset>
-                    <input placeholder="Adresse email" type="email" tabindex="2" required>
-                  </fieldset>
-                  <fieldset>
-                    <input placeholder="Numéro de téléphone" type="tel" tabindex="3">
-                  </fieldset>
-                 
-                  <fieldset>
-                    <textarea placeholder="Tapez votre message ici..." tabindex="5" required></textarea>
-                  </fieldset>
-                  <fieldset>
-                    <button name="submit" type="submit" id="contact-submit" >Envoyer</button>
-                  </fieldset>
-                </form>
+                
+                <h3>Contactez-nous</h3>
+                <h4>Envoyez nous votre demande et elle sera probablement traité dans les moins de deux ans.</h4>
+                  <div id="formio"></div>
                 <!-- <iframe src="https://cdn.forms-content.sg-form.com/bb12f40a-a0a4-11ed-a39d-c625240a315c"/> -->
-                <div id="formio"></div>
+                
 
               </div>
             
