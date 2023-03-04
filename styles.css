@@ -66,24 +66,18 @@ main #img--container {
      object-fit: fill;
 }
 main #img--container div {
-  -webkit-animation-duration: 3500ms;
-          animation-duration: 3500ms;
-  -webkit-animation-name: appear;
-          animation-name: appear;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
+  animation-duration: 3500ms;
+  animation-name: appear;
+  animation-fill-mode: both;
 }
 main #img--container div:nth-child(1n) {
-  -webkit-animation-delay: 300ms;
-          animation-delay: 300ms;
+  animation-delay: 300ms;
 }
 main #img--container div:nth-child(2n) {
-  -webkit-animation-delay: 600ms;
-          animation-delay: 600ms;
+  animation-delay: 600ms;
 }
 main #img--container div:nth-child(3n) {
-  -webkit-animation-delay: 900ms;
-          animation-delay: 900ms;
+  animation-delay: 900ms;
 }
 main .img--round {
   height: 8rem;
@@ -117,47 +111,43 @@ main .img--round:hover {
 
 #about__text {
   font-size: large;
-  -webkit-animation: pageChange--click 5000ms ease;
-          animation: pageChange--click 5000ms ease;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation: pageChange--click 5000ms ease;
+  animation-fill-mode: forwards;
   width: 0vw;
   overflow: hidden;
 }
 
 #contact {
   display: none;
-  -webkit-animation: fadein 1300ms ease;
-          animation: fadein 1300ms ease;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
+  transform: translate(0, -90rem);
+  animation: pageSwap 1000ms ease;
+  animation-fill-mode: both;
   color: #eeeeee;
 }
-#contact menu {
+
+menu {
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
   margin: 0;
+  padding: 0.5rem;
   background-color: #77628c;
   gap: 2rem;
   color: #eeeeee;
 }
-#contact menu img {
+menu img {
   height: 9vh;
 }
-#contact menu li:nth-child(3) {
-  padding-top: 1rem;
-  border-top: solid rgba(255, 255, 255, 0) 2px;
+menu li:nth-child(3), menu li:nth-child(4) {
+  padding: 1rem;
+  border-top: solid 2px;
+  border-color: #acc6aa;
+  -webkit-mask: conic-gradient(from 180deg at top 8px right 8px, rgba(0, 0, 0, 0) 90deg, #000 0) var(--_i, 200%) 0/200% var(--_i, 8px) border-box no-repeat, conic-gradient(at bottom 8px left 8px, rgba(0, 0, 0, 0) 90deg, #000 0) 0 var(--_i, 200%)/var(--_i, 8px) 200% border-box no-repeat, linear-gradient(#000 0 0) padding-box no-repeat;
+  transition: 300ms;
 }
-#contact menu li:nth-child(4) {
-  padding-top: 1rem;
-  border-top: solid rgba(255, 255, 255, 0) 2px;
-}
-#contact menu li:nth-child(3):hover {
-  border-top: solid #eeeeee 2px;
-}
-#contact menu li:nth-child(4):hover {
-  border-top: solid #eeeeee 2px;
+menu li:nth-child(3):hover, menu li:nth-child(4):hover {
+  --_i: 100%;
+  transition: 300ms;
 }
 
 #contact--wrapper {
@@ -257,17 +247,6 @@ input, textarea {
   border: 2px solid #77628c;
 }
 
-@-webkit-keyframes fadein {
-  0% {
-    opacity: 0;
-    background-color: rgb(151, 139, 139);
-  }
-  100% {
-    opacity: 1;
-    background-color: white;
-  }
-}
-
 @keyframes fadein {
   0% {
     opacity: 0;
@@ -276,22 +255,6 @@ input, textarea {
   100% {
     opacity: 1;
     background-color: white;
-  }
-}
-@-webkit-keyframes appear {
-  0% {
-    opacity: 0%;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  60% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
   }
 }
 @keyframes appear {
@@ -310,11 +273,6 @@ input, textarea {
     transform: scale(1);
   }
 }
-@-webkit-keyframes pageChange--click {
-  100% {
-    width: 100vw;
-  }
-}
 @keyframes pageChange--click {
   100% {
     width: 100vw;
@@ -331,12 +289,9 @@ input, textarea {
   height: 50vh;
   z-index: 1;
   background-color: whitesmoke;
-  -webkit-animation: loader--top 500ms ease;
-          animation: loader--top 500ms ease;
-  -webkit-animation-delay: 1800ms;
-          animation-delay: 1800ms;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation: loader--top 500ms ease;
+  animation-delay: 1800ms;
+  animation-fill-mode: forwards;
 }
 
 #loader--bottom {
@@ -346,21 +301,15 @@ input, textarea {
   height: 50vh;
   z-index: 1;
   background-color: whitesmoke;
-  -webkit-animation: loader--bottom 500ms ease;
-          animation: loader--bottom 500ms ease;
-  -webkit-animation-delay: 1800ms;
-          animation-delay: 1800ms;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation: loader--bottom 500ms ease;
+  animation-delay: 1800ms;
+  animation-fill-mode: forwards;
 }
 
 #loader__logo {
-  -webkit-animation: loader__logo 300ms ease;
-          animation: loader__logo 300ms ease;
-  -webkit-animation-delay: 1500ms;
-          animation-delay: 1500ms;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation: loader__logo 300ms ease;
+  animation-delay: 1500ms;
+  animation-fill-mode: forwards;
   position: absolute;
   top: 25%;
   left: 25%;
@@ -377,34 +326,22 @@ input, textarea {
      object-fit: contain;
 }
 #loader__logo img:nth-child(1) {
-  -webkit-animation: logo--twist 800ms ease;
-          animation: logo--twist 800ms ease;
-  -webkit-animation-delay: 500ms;
-          animation-delay: 500ms;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation: logo--twist 800ms ease;
+  animation-delay: 500ms;
+  animation-fill-mode: forwards;
 }
 #loader__logo img:nth-child(2) {
-  -webkit-animation: logo--pulse 500ms ease;
-          animation: logo--pulse 500ms ease;
-  -webkit-animation-delay: 50ms;
-          animation-delay: 50ms;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation: logo--pulse 500ms ease;
+  animation-delay: 50ms;
+  animation-fill-mode: forwards;
 }
 
-@-webkit-keyframes loader--top {
+@keyframes pageSwap {
   100% {
-    height: 0rem;
+    transform: translate(0, 0rem);
   }
 }
-
 @keyframes loader--top {
-  100% {
-    height: 0rem;
-  }
-}
-@-webkit-keyframes loader--bottom {
   100% {
     height: 0rem;
   }
@@ -414,34 +351,15 @@ input, textarea {
     height: 0rem;
   }
 }
-@-webkit-keyframes loader__logo {
-  100% {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
 @keyframes loader__logo {
   100% {
     opacity: 0;
     visibility: hidden;
   }
 }
-@-webkit-keyframes logo--twist {
-  100% {
-    transform: rotate(360deg);
-  }
-}
 @keyframes logo--twist {
   100% {
     transform: rotate(360deg);
-  }
-}
-@-webkit-keyframes logo--pulse {
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
   }
 }
 @keyframes logo--pulse {
@@ -450,6 +368,11 @@ input, textarea {
   }
   100% {
     transform: scale(1);
+  }
+}
+@keyframes barreRemplissage {
+  100% {
+    border-top: solid #eeeeee 2px;
   }
 }
 @media (min-width: 850px) {
