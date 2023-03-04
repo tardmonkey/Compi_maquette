@@ -5,6 +5,7 @@ li {
 html {
   height: 100%;
   font-family: "Roboto", sans-serif;
+  background-color: #eeeeee;
 }
 
 body {
@@ -13,6 +14,23 @@ body {
   flex-direction: column;
   margin: 0px;
   height: 100%;
+}
+
+footer {
+  width: 99vw;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #acc6aa;
+}
+footer i {
+  margin: 0.4rem;
+  color: #77628c;
+}
+footer p {
+  margin: 0.2rem;
 }
 
 .hide {
@@ -152,10 +170,10 @@ menu li:nth-child(3):hover, menu li:nth-child(4):hover {
 
 #contact--wrapper {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  background-color: #eeeeee;
+  margin-bottom: 4%;
 }
 #contact--wrapper h2 {
   margin-top: 2rem;
@@ -166,24 +184,8 @@ menu li:nth-child(3):hover, menu li:nth-child(4):hover {
 #contact--wrapper p:nth-child(3) {
   font-style: italic;
 }
-#contact--wrapper #contact--wrapper__contact {
-  width: 99vw;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #acc6aa;
-}
-#contact--wrapper #contact--wrapper__contact i {
-  margin: 0.4rem;
-  color: #77628c;
-}
-#contact--wrapper #contact--wrapper__contact p {
-  margin: 0.2rem;
-}
 #contact--wrapper #map--wrapper {
-  width: 99vw;
+  width: 100%;
   height: 50vh;
 }
 #contact--wrapper iframe {
@@ -206,6 +208,7 @@ menu li:nth-child(3):hover, menu li:nth-child(4):hover {
 }
 
 .form_wrapper {
+  width: 50%;
   padding: 2rem;
 }
 .form_wrapper h3 {
@@ -219,6 +222,11 @@ menu li:nth-child(3):hover, menu li:nth-child(4):hover {
 #formio {
   display: flex;
   justify-content: center;
+  width: 100%;
+}
+
+.formio-component, .formio-component-form, .formio-component-label-hidden {
+  width: 100%;
 }
 
 input, textarea {
