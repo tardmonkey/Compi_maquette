@@ -157,14 +157,14 @@ menu {
 menu img {
   height: 9vh;
 }
-menu li:nth-child(3), menu li:nth-child(4) {
+menu li:nth-child(2), menu li:nth-child(3) {
   padding: 1rem;
   border-top: solid 2px;
   border-color: #acc6aa;
   -webkit-mask: conic-gradient(from 180deg at top 8px right 8px, rgba(0, 0, 0, 0) 90deg, #000 0) var(--_i, 200%) 0/200% var(--_i, 8px) border-box no-repeat, conic-gradient(at bottom 8px left 8px, rgba(0, 0, 0, 0) 90deg, #000 0) 0 var(--_i, 200%)/var(--_i, 8px) 200% border-box no-repeat, linear-gradient(#000 0 0) padding-box no-repeat;
   transition: 300ms;
 }
-menu li:nth-child(3):hover, menu li:nth-child(4):hover {
+menu li:nth-child(2):hover, menu li:nth-child(3):hover {
   --_i: 100%;
   transition: 300ms;
 }
