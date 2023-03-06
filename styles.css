@@ -4,7 +4,7 @@ li {
 
 html {
   height: 100%;
-  font-family: "Roboto", sans-serif;
+  font-family: "Nunito", sans-serif;
   background-color: #eeeeee;
 }
 
@@ -17,18 +17,17 @@ body {
 }
 
 footer {
-  height: 100%;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #acc6aa;
-  padding-top: 0.5rem;
-  padding-bottom: 1.2rem;
+  padding-bottom: 2rem;
 }
 footer i {
-  margin: 0.4rem;
+  font-size: 1.5rem;
+  margin-right: 0.4rem;
   color: #77628c;
 }
 footer p {
@@ -172,9 +171,10 @@ menu li:nth-child(3):hover, menu li:nth-child(4):hover {
 
 #contact--wrapper {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  background-color: #eeeeee;
 }
 #contact--wrapper h2 {
   margin-top: 2rem;
@@ -209,7 +209,6 @@ menu li:nth-child(3):hover, menu li:nth-child(4):hover {
 }
 
 .form_wrapper {
-  width: 50%;
   padding: 2rem;
 }
 .form_wrapper h3 {
@@ -401,5 +400,14 @@ input, textarea {
     left: 40%;
     height: 25vh;
     width: 25vw;
+  }
+  #contact--wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  #contact--wrapper .form_wrapper {
+    width: 40%;
   }
 }/*# sourceMappingURL=styles.css.map */
