@@ -87,8 +87,8 @@ main{
     background-size: cover;
     background-repeat: none;
     background-position: center;
-   
     object-fit: fill;
+    
     h1{
         color:$first-color;
         transform: translate3d(0rem,-5.5rem,0rem);
@@ -169,7 +169,7 @@ main{
 }
 
 #contact{
-    display: none;
+    display: block;
     transform: translate(0,-90rem);
     animation: pageSwap 1000ms ease; animation-fill-mode: both;
     color:$first-color;

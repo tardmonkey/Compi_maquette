@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
 
+
+    Formio.createForm(document.getElementById('formio'),"https://ryllkgmvxqvfpnm.form.io/demande" );
     
     
 
@@ -27,13 +29,9 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById("contact").style.display = "flex"
         document.getElementById("contact").setAttribute("class", "about--clicked")
 
-        //Reload Openmapstreet pour avoir le bon zoom
-        setTimeout(() => {
-            let buggyid = document.getElementById("map");
-            buggyid.src = buggyid.src;
-        }, 500);       
+              
         
-        Formio.createForm(document.getElementById('formio'),"https://ryllkgmvxqvfpnm.form.io/demande" );
+        
     }
 
     function pageAccueil(){

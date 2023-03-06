@@ -137,7 +137,7 @@ main .img--round:hover {
 }
 
 #contact {
-  display: none;
+  display: block;
   transform: translate(0, -90rem);
   animation: pageSwap 1000ms ease;
   animation-fill-mode: both;
